@@ -16,6 +16,7 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://s3-eu-west-1.amazonaws.com/paldesk-maven/release/" }
     }
 }
 
@@ -31,4 +32,7 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+dependencies {
+    implementation 'com.paldesk.android:paldesk-sdk:1.0.3'
 }

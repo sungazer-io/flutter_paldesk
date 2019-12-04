@@ -33,12 +33,15 @@ public class SwiftFlutterPaldeskPlugin: NSObject, FlutterPlugin {
             result(true)
             break;
         case SwiftFlutterPaldeskPlugin.METHOD_START_CONVERSATION:
+            PaldeskSDK.startConversation(viewController: vc)
             result(true)
             break;
         case SwiftFlutterPaldeskPlugin.METHOD_CLEAR:
+            PaldeskSDK.clear()
             result(true)
             break;
         case SwiftFlutterPaldeskPlugin.METHOD_CREATE_ANONYMOUS_CLIENT:
+            PaldeskSDK.createAnonymousClient()
             result(true)
             break;
         case SwiftFlutterPaldeskPlugin.METHOD_CREATE_CLIENT:

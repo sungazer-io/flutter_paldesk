@@ -50,6 +50,13 @@ public class SwiftFlutterPaldeskPlugin: NSObject, FlutterPlugin {
             let externalId = arguments["externalId"] as! String
             let firstName = arguments["firstName"] as! String
             let lastName = arguments["lastName"] as! String
+            let params = [
+                "email":email,
+                "externalId":externalId,
+                "firstName":firstName,
+                "lastName":lastName
+            ]
+            PaldeskSDK.createClient(params: params)
             result(true)
             break;
         case "getPlatformVersion":
